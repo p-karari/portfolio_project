@@ -1,0 +1,21 @@
+import curious from '../images/curious.jpg'
+function About() {
+  return (
+    <>
+<div className="relative mx-auto text-4xl font-bold w-[50%] my-[2rem] flex items-center justify-center">
+  <span className="absolute text-[6rem] text-gray-400 opacity-30 ">About</span>
+  <p className="relative z-10 mt-[1rem]">About Me</p>
+</div>    <div className="flex flex-row mx-auto w-[80%]">
+        <div className="w-[30rem] h-[15rem] mx-auto my-[1rem]"><img className='rounded-lg shadow-2xl' src={curious} alt="curious icon.jpg" /></div>
+        <div className="w-[25rem] h-[22rem] mx-auto my-[1rem] text-1.2xl">
+          My name is Karari Kelvin or you can call me dev Karari if you want. I am a kirinyaga university graduate with a bachelor's degree in software engineering.
+           I am a plp certified fullstack developer, my technical skills include proficiency in typescript, drizzle orm, hono and postgresql for backend, React js, tailwind,material ui, html and css are my preffered frontend languages.
+           I've built and deployed complex applications with these technologies. I take pride in what i do, i am a team player and thrive in collaborative environments. I pay attention to details in any solution i'm working on and find creative ways to solve problems.
+           More information about me is on this website
+        </div>
+    </div>
+    </>
+    )
+}
+
+export default About
