@@ -17,53 +17,75 @@ function Contact() {
 
   <div className="flex flex-row h-[20rem] justify-center items-center">
 
-    {/* <div className="flex items-left justify-left h-screen mx-[10rem]">
-  <div className="w-[15rem] h-[25rem] bg-black rounded-[2rem] border-4 border-gray-300 relative overflow-hidden shadow-lg">
-    
-    <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-black w-[6rem] h-4 rounded-b-lg"></div>
-
-    <div className="absolute inset-0 m-4 bg-white rounded-[1.5rem] overflow-hidden">
-      <div className="h-full flex flex-col items-center justify-center bg-gradient-to-r from-blue-400 to-purple-500">
-        <div className="text-2xl font-semibold text-white">Hi there</div>
-        <div className="grid grid-cols-3 gap-3 mt-6">
-          <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg"></div>
-          <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg"></div>
-          <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg"></div>
-          <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg"></div>
-          <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg"></div>
-          <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg"></div>
-        </div>
-      </div>
-    </div>
-
-    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gray-300 w-[4rem] h-1 rounded-full mb-3"></div>
-  </div>
-</div> */}
-
 <div className="">
 <ul className="timeline timeline-vertical">
+  {/* Email - Opens default email app */}
   <li>
-    <div className="timeline-start timeline-box flex"><img src={Email} alt="" width='30px' height='30px'  /><p className='my-[5px]'>Email</p></div>
+    <hr />
+    <a 
+      href="mailto:kararikelvin2002@gmail.com" 
+      className="timeline-start timeline-box flex cursor-pointer"
+    >
+      <img src={Email} alt="Email Icon" width="30px" height="30px" />
+      <p className="my-[5px]">Email</p>
+    </a>
+  </li>
+
+  {/* LinkedIn - Opens in a new tab */}
+  <li>
+    <hr />
+    <a 
+      href="www.linkedin.com/in/kelvin-karari-120867245" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="timeline-end timeline-box flex"
+    >
+      <img src={LinkedIn} alt="LinkedIn Icon" width="30px" height="30px" />
+      <p className="my-[5px]">LinkedIn</p>
+    </a>
     <hr />
   </li>
+
+  {/* GitHub - Opens in a new tab */}
   <li>
     <hr />
-    <div className="timeline-end timeline-box flex "><img src={LinkedIn} alt="" width='30px' height='30px'  /><p className='my-[5px]'>LinkedIn</p></div>
+    <a 
+      href="https://github.com/p-karari" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="timeline-start timeline-box flex"
+    >
+      <img src={Github} alt="GitHub Icon" width="30px" height="30px" />
+      <p className="my-[5px]">GitHub</p>
+    </a>
     <hr />
   </li>
+
+  {/* Telegram - Opens in a new tab */}
   <li>
     <hr />
-    <div className="timeline-start timeline-box flex"><img src={Github} alt="" width='30px' height='30px'  /><p className='my-[5px]'>github</p></div>
+    <a 
+      href="https://t.me/grizzlygremlin" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="timeline-end timeline-box flex"
+    >
+      <img src={Telegram} alt="Telegram Icon" width="30px" height="30px" />
+      <p className="my-[5px]">Telegram</p>
+    </a>
     <hr />
   </li>
+
+  {/* Phone - Clicking will copy number to clipboard */}
   <li>
     <hr />
-    <div className="timeline-end timeline-box flex"><img src={Telegram} alt="" width='30px' height='30px'  /><p className='my-[5px]'>telegram</p></div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div className="timeline-start timeline-box flex"><img src={Phone} alt="" width='30px' height='30px'  /><p className='my-[5px]'>Phone</p></div>
+    <div 
+      className="timeline-start timeline-box flex cursor-pointer"
+      onClick={() => navigator.clipboard.writeText("+254111640040")}
+    >
+      <img src={Phone} alt="Phone Icon" width="30px" height="30px" />
+      <p className="my-[5px]">Phone</p>
+    </div>
   </li>
 </ul>
 </div>
