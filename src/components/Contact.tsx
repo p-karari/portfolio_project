@@ -11,8 +11,8 @@ function Contact() {
   
 
     <div className="relative mx-auto text-4xl font-bold w-[80%] my-[2rem] flex items-center justify-center">
-  <span className="absolute text-[6rem] text-gray-400 opacity-40 ">Get in-touch with me</span>
-  <p className="relative z-10 mt-[1rem]">Contact me</p>
+  <span className="absolute text-[6rem] opacity-70 font-general text-gold">Get in-touch with me</span>
+  <p className="relative z-10 mt-[1rem] text-white">Contact me</p>
 </div>
 
   <div className="flex flex-row h-[20rem] justify-center items-center">
@@ -93,7 +93,8 @@ function Contact() {
 <div>
 <div className="mockup-code mx-[6rem]">
   <pre data-prefix="$"><code>Thankyou for visiting</code></pre>
-  <pre data-prefix=">" className="text-warning"><code>here's how to contact me...</code></pre>
+  <pre data-prefix=">" className="text-warning"><code>Email: kararikelvin2002@gmail.com</code></pre>
+  <pre data-prefix=">" className="text-warning"><code>Phone: +254111640040</code></pre>
   <pre data-prefix=">" className="text-success"><code>Looking forward to working together!</code></pre>
 </div>
 </div>
