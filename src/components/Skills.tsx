@@ -15,10 +15,10 @@ import DjangoPic from '../images/download.png'
 function skills() {
   return (
     <>
-    <div>
+    <div className="font-general">
 <div className="relative mx-auto text-4xl font-bold w-[50%] flex items-center justify-center">
-  <span className="absolute text-[4rem] text-gray-400 opacity-30 ">skills repository</span>
-  <p className="relative z-10 mt-[1rem]">My Skills</p>
+  <span className="absolute text-[6rem] opacity-70 font-general text-gold">skills repository</span>
+  <p className="relative z-10 mt-[1rem] text-white font-general">My Skills</p>
 </div>
 
     <div className="flex flex-row w-[80%] mx-auto my-[1rem]">
