@@ -2,9 +2,10 @@
 function Resume() {
   return (
     <>
-<div className="relative mx-auto text-4xl font-bold w-[50%] my-[2rem] flex items-center justify-center">
-  <span className="absolute text-[6rem] text-gray-400 opacity-30 ">Mini-Timeline</span>
-  <p className="relative z-10 mt-[1rem]">Resume</p>
+  <div>
+<div className="relative mx-auto text-4xl font-bold w-[50%] my-[2rem] flex items-center justify-center font-general">
+  <span className="absolute text-[6rem] opacity-70 font-general text-gold">Mini-Timeline</span>
+  <p className="relative z-10 mt-[1rem] text-white">Resume</p>
 </div>
     <div className="flex flex-row mx-auto w-[85%]">
         <div className="border border-black-700 w-[45%] mx-[2rem] my-[1rem] h-[17rem] flex flex-col gap-4 p-[10px] bg-gray-100 shadow-2xl rounded">
@@ -56,6 +57,7 @@ function Resume() {
         <p>I attended Serene Academy from 2008 to 2016, completing my primary school 
         education with distinction and achieving exceptional results in my KCPE exams with a straight A in mathematics</p>
         </div>
+    </div>
     </div>
     </>
   )
