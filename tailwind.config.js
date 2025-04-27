@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gold: {
+          DEFAULT: '#FFD700', // classic gold
+          light: '#FFEF9F',    // lighter variation
+          dark: '#B8860B',     // deeper variation
+        },
+      },
+      fontFamily: {
+        general: ['"Author"', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     require('daisyui'),
@@ -14,4 +25,5 @@ export default {
     themes: ["cmyk", "black"],
   },
 }
+
 
