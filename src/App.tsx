@@ -1,32 +1,3 @@
-
-// import './App.css'
-// import Navbar from './components/Navbar'
-// import Hero from './components/Hero'
-// import About from './components/About'
-// import Projects from './components/Projects'
-// import Skills from './components/Skills'
-// import Resume from './components/Resume'
-// import Contact from './components/Contact'
-// import Footer from './components/Footer'
-
-// function App() {
-
-//   return (
-//     <>
-//     <Navbar />  
-//     <Hero />  
-//     <About />
-//     <Projects />
-//     <Skills />
-//     <Resume />
-//     <Contact />
-//     <Footer />
-//     </>
-//   )
-// }
-
-// export default App
-
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -36,10 +7,13 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
+import './Fonts/css/author.css';
+
 
 function App() {
   return (
     <>
+    <div className="bg-[url('/backgrounds/cubes.png')] bg-repeat bg-black min-h-screen">
       <Navbar />
       <main>
         <section id="hero"><Hero /></section>
@@ -50,6 +24,7 @@ function App() {
         <section id="contact"><Contact /></section>
       </main>
       <Footer />
+    </div>
     </>
   );
 }
