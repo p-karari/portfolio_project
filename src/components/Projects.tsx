@@ -1,177 +1,105 @@
-// import Bg2 from '../images/bg4.jpg'
-import Genesis from '../images/Genesis001.png'
-import Travellog from '../images/travellog.png'
-import Estores from '../images/Estores.png'
-import SocialAnalyzer from '../images/SocialMediaTracker.png'
-import Jobs from '../images/JobListings.png'
-import Countries from '../images/CountriesSearch.png'
-import { Tilt } from 'react-tilt'
+import Genesis from '../images/Genesis001.png';
+import Travellog from '../images/travellog.png';
+import Estores from '../images/Estores.png';
+import SocialAnalyzer from '../images/SocialMediaTracker.png';
+import Jobs from '../images/JobListings.png';
+import Countries from '../images/CountriesSearch.png';
+import { Tilt } from 'react-tilt';
 
 function Projects() {
+  const projects = [
+    {
+      title: 'Genesis Real Estate',
+      description: 'Genesis Real Estate is an intuitive and dynamic platform designed for individuals looking to buy, sell, or rent properties. The website allows users to browse property listings, get value estimates, and explore mortgage plans, ensuring a seamless real estate experience for both first-time buyers and seasoned investors.',
+      image: Genesis,
+      github: 'https://github.com/p-karari/Real_Estate_Responsive_web',
+      live: 'https://p-karari.github.io/Real_Estate_Responsive_web/',
+    },
+    {
+      title: 'Estore',
+      description: 'Estore is an online store built with Django that allows customers to browse a wide range of products, apply filters, and complete purchases. It also empowers administrators to manage inventories, add new products, and promote sales, all while ensuring an intuitive experience for both users and store managers.',
+      image: Estores,
+      github: 'https://github.com/p-karari/E-stores',
+      live: 'https://github.com/p-karari/E-stores',
+    },
+    {
+      title: 'Jobs Listings',
+      description: 'Jobs Listings is a React-based job board that enables users to filter and browse job roles based on various criteria such as category, location, and salary range. It provides detailed job descriptions, allowing users to make informed decisions about job applications.',
+      image: Jobs,
+      github: 'https://github.com/p-karari/Job_Listings',
+      live: 'https://p-karari.github.io/Job_Listings/',
+    },
+    {
+      title: 'Social Media Tracker',
+      description: 'Social Media Tracker is a dashboard that monitors various social media metrics, such as follower count and post engagement. Built using HTML, CSS, and JavaScript, it provides valuable insights for individuals and businesses looking to optimize their social media strategies.',
+      image: SocialAnalyzer,
+      github: 'https://github.com/p-karari/Social_media_tracker_App',
+      live: 'https://p-karari.github.io/Social_media_tracker_App/',
+    },
+    {
+      title: 'Travellog',
+      description: 'Travellog is a travel website UI designed to showcase destinations and tour packages. The responsive design allows users to explore detailed itineraries, user-friendly navigation, and booking systems to plan their trips more easily.',
+      image: Travellog,
+      github: 'https://github.com/p-karari/tours_and_travel_responsive',
+      live: 'https://p-karari.github.io/tours_and_travel_responsive/',
+    },
+    {
+      title: 'Countries Search App',
+      description: 'Countries Search App allows users to search for countries and retrieve detailed information like population, area, languages, and more. Using a JSON API, the app ensures up-to-date and accurate data for a user-friendly experience.',
+      image: Countries,
+      github: 'https://github.com/p-karari/COUNTRIES_SEARCH_APP',
+      live: 'https://p-karari.github.io/COUNTRIES_SEARCH_APP/',
+    },
+  ];
+
   return (
-    <>
-    <div className='my-[2rem] font-general'>
-    <div className="relative mx-auto text-4xl font-bold w-[50%] flex items-center justify-center">
-  <span className="absolute text-[6rem] opacity-70 font-general text-gold">Projects</span>
-  <p className="relative z-10 mt-[1rem] text-white">My Projects</p>
-</div>
-    <div className='flex flex-row mx-auto w-[80%] my-[1rem]'>
+    <div className="my-10 px-4 font-general">
+      <div className="relative mx-auto text-4xl font-bold w-[90%] md:w-[70%] lg:w-[50%] flex items-center justify-center">
+        <span className="absolute text-[6rem] opacity-70 font-general text-gold">Projects Array</span>
+        <p className="relative z-10 mt-[1rem] text-white font-general">Projects</p>
+      </div>
 
-    <Tilt className="rounded-lg shadow-2xl w-[20rem] h-[32rem] m-auto" options={{ max: 25, scale: 1.05 }}>
-  <div className='rounded-md bg-gray-100 border border-solid border-gray-300 p-4 h-full'>
-    <div className="w-[100%] rounded-md h-[55%]">
-      <img className="h-full w-full object-cover object-left-top rounded-md" src={Genesis} alt="Genesis Real Estate" />
-    </div>
-    <div className="h-[40%] m-[5px]">
-      <h1 className="text-2xl font-bold m-auto w-[auto] text-[#FF8C00]">Genesis Real Estate</h1>
-      <p>
-        A real estate website for a fictional company where you can view listings, find houses for sale or to rent.
-        You can also get value estimations and price quotations along with mortgage plans.
-      </p>
-      <div className="flex flex-row my-[5px]">
-        <a
-          href="https://github.com/p-karari/Real_Estate_Responsive_web"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center"
-        >
-          Github
-        </a>
-        <a
-          href="https://p-karari.github.io/Real_Estate_Responsive_web/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center"
-        >
-          Visit
-        </a>
+      <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-8 mt-10">
+        {projects.map((proj, idx) => (
+          <Tilt key={idx} className="w-[90%] sm:w-[18rem] h-[32rem]">
+            <div className="rounded-xl bg-black/50 text-white border border-gold shadow-lg h-full p-4 flex flex-col justify-between">
+              <div className="h-[45%] rounded-md overflow-hidden">
+                <img
+                  src={proj.image}
+                  alt={proj.title}
+                  className="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div className="flex flex-col justify-between h-[55%] mt-4">
+                <div className="flex flex-col">
+                  <h3 className="text-gold text-lg font-bold mb-1">{proj.title}</h3>
+                  <p className="text-sm leading-snug overflow-hidden text-ellipsis">{proj.description}</p>
+                </div>
+                <div className="flex justify-between mt-4">
+                  <a
+                    href={proj.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-700 hover:bg-blue-800 px-3 py-2 rounded-md text-white text-xs font-semibold w-[48%] text-center"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href={proj.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-700 hover:bg-blue-800 px-3 py-2 rounded-md text-white text-xs font-semibold w-[48%] text-center"
+                  >
+                    Visit
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Tilt>
+        ))}
       </div>
     </div>
-  </div>
-</Tilt>
-
-
-<Tilt className="rounded-lg shadow-2xl w-[20rem] h-[32rem] m-auto" options={{ max: 25, scale: 1.05 }}>
-  <div className='rounded-md bg-gray-100 border border-solid border-gray-300 p-4 h-full'>
-    <div className="w-[100%] rounded-md h-[55%]">
-      <img className="h-full w-full object-cover object-centre rounded-md" src={Estores} alt="Estore Screenshot" />
-    </div>
-    <div className="h-[40%] m-[5px]">
-      <h1 className="text-2xl font-bold m-auto w-[auto] text-[#FF8C00]">Estore</h1>
-      <p>
-        An online store developed with Django where users browse products for sale, while admins can add new products. Also includes various filters.
-      </p>
-      <div className="flex flex-row my-[5px]">
-        <a
-          href="https://github.com/p-karari/E-stores"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center"
-        >
-          Github
-        </a>
-        <a
-          href="https://github.com/p-karari/E-stores"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center"
-        >
-          Visit
-        </a>
-      </div>
-    </div>
-  </div>
-</Tilt>
-
-<Tilt className="rounded-lg shadow-2xl w-[20rem] h-[32rem] m-auto" options={{ max: 25, scale: 1.05 }}>
-  <div className='rounded-md bg-gray-100 border border-solid border-gray-300 p-4 h-full'>
-    <div className="w-[100%] h-[55%]">
-      <img className="h-full w-full object-cover object-left-top rounded-md" src={Jobs} alt="Jobs Listings Screenshot" />
-    </div>
-    <div className="h-[40%] m-[5px]">
-      <h1 className="text-2xl font-bold m-auto w-[auto] text-[#FF8C00]">Jobs Listings</h1>
-      <p>
-        A job listings UI built with React that displays available job postings, allows users to search and filter jobs, and provides detailed job descriptions.
-      </p>
-      <div className="flex flex-row my-[5px]">
-        <a
-          href="https://github.com/p-karari/Job_Listings"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center"
-        >
-          Github
-        </a>
-        <a
-          href="https://p-karari.github.io/Job_Listings/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center"
-        >
-          Visit
-        </a>
-      </div>
-    </div>
-  </div>
-</Tilt>
-
-
-    </div>
-<div className="flex flex-row mx-auto w-[80%] my-[1rem]">
-  <Tilt className="rounded-lg shadow-2xl w-[20rem] h-[32rem] m-auto" options={{ max: 25, scale: 1.05 }}>
-    <div className='rounded-md bg-gray-100 border border-solid border-gray-300 p-4 h-full'>
-      <div className="w-[100%] rounded-md h-[55%]">
-        <img className="h-full w-full object-cover rounded-md" src={SocialAnalyzer} alt="Social Media Tracker" />
-      </div>
-      <div className="h-[40%] m-[5px]">
-        <h1 className="text-2xl font-bold m-auto w-[auto] text-[#FF8C00]">Social Media Tracker</h1>
-        <p>An interface built with HTML, CSS, and JS that tracks and displays various social media statistics in a user-friendly dashboard.</p>
-        <div className="flex flex-row my-[5px]">
-          <a href="https://github.com/p-karari/Social_media_tracker_App" target="_blank" rel="noopener noreferrer" className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center">Github</a>
-          <a href="https://p-karari.github.io/Social_media_tracker_App/" target="_blank" rel="noopener noreferrer" className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center">Visit</a>
-        </div>
-      </div>
-    </div>
-  </Tilt>
-
-  <Tilt className="rounded-lg shadow-2xl w-[20rem] h-[32rem] m-auto" options={{ max: 25, scale: 1.05 }}>
-    <div className='rounded-md bg-gray-100 border border-solid border-gray-300 p-4 h-full'>
-      <div className="w-[100%] rounded-md h-[55%]">
-        <img className="h-full w-full object-cover rounded-md" src={Travellog} alt="Travellog" />
-      </div>
-      <div className="h-[40%] m-[5px]">
-        <h1 className="text-2xl font-bold m-auto w-[auto] text-[#FF8C00]">Travellog</h1>
-        <p>A tours and travel website UI for a fictional company that organizes trips to various destinations in the world. Utilizes HTML, CSS, and JS.</p>
-        <div className="flex flex-row my-[5px]">
-          <a href="https://github.com/p-karari/tours_and_travel_responsive" target="_blank" rel="noopener noreferrer" className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center">Github</a>
-          <a href="https://p-karari.github.io/tours_and_travel_responsive/" target="_blank" rel="noopener noreferrer" className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center">Visit</a>
-        </div>
-      </div>
-    </div>
-  </Tilt>
-
-  <Tilt className="rounded-lg shadow-2xl w-[20rem] h-[32rem] m-auto" options={{ max: 25, scale: 1 }}>
-    <div className='rounded-md bg-gray-100 border border-solid border-gray-300 p-4 h-full'>
-      <div className="w-[100%] rounded-md h-[55%]">
-        <img className="h-full w-full object-cover object-left-top rounded-md" src={Countries} alt="Countries Search App" />
-      </div>
-      <div className="h-[40%] m-[5px]">
-        <h1 className="text-2xl font-bold m-auto w-[auto] text-[#FF8C00]">Countries Search App</h1>
-        <p>A web app using HTML, CSS, JS, and JSON data to search and retrieve information about countries worldwide.</p>
-        <div className="flex flex-row my-[5px]">
-          <a href="https://github.com/p-karari/COUNTRIES_SEARCH_APP" target="_blank" rel="noopener noreferrer" className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center">Github</a>
-          <a href="https://p-karari.github.io/COUNTRIES_SEARCH_APP/" target="_blank" rel="noopener noreferrer" className="w-[45%] p-[8px] rounded-lg m-auto bg-[#008080] text-center flex justify-center">Visit</a>
-        </div>
-      </div>
-    </div>
-  </Tilt>
-
-    </div>
-
-    </div>
-    </>
-  )
+  );
 }
 
-export default Projects
-
+export default Projects;
