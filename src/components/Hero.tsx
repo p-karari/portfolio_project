@@ -7,60 +7,60 @@ import { Tilt } from 'react-tilt';
 
 function Hero() {
   return (
-    <div>
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        {/* Apply tilt effect to the image */}
-        <Tilt className="rounded-lg shadow-2xl w-[50%]" options={{ max: 25, scale: 1.05 }}>
+    <div className="px-4 py-10 w-full max-w-screen overflow-hidden">
+      <div className="hero-content flex flex-col lg:flex-row-reverse items-center justify-between gap-4 w-full">
+        {/* Image (only visible on large screens) */}
+        <Tilt 
+          className="rounded-lg shadow-2xl w-[80%] sm:w-[60%] lg:w-[40%] hidden lg:block" 
+          options={{ max: 25, scale: 1.05 }}
+        >
           <img
             src={critical}
             alt="Critical Thinking Icon"
-            className="w-full" // Ensures the image is responsive and fits the container
+            className="w-full h-auto object-contain"
           />
         </Tilt>
 
-        <div>
-          <h1 className="text-5xl font-bold text-white font-general">Hello! <span className="text-gold">welcome to my portfolio!</span> </h1>
-          <p className="py-6 text-2xl text-white font-general">
-            I am Kelvin Karari, an experienced software engineer. Here's a little about me.
+        {/* Text Section */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-[60%]">
+          <h1 className="text-[7vw] sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white font-general leading-tight">
+            🚀 Turning Coffee into Code, One Bug at a Time<br />
+            <span className="text-gold">Welcome to my digital playground!</span>
+          </h1>
+          <p className="mt-4 text-[4.5vw] sm:text-lg md:text-xl text-white font-general leading-relaxed max-w-[90%] sm:max-w-full">
+            I'm Kelvin Karari, a passionate software engineer who loves solving real-world problems through code.
           </p>
-          <div className="flex flex-row">
 
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center lg:justify-start items-center gap-3 mt-6 w-full">
             <a 
-                href="/CV - KARARI - 2025_APRIL.pdf"  // Replace with your actual file name
-                download="Kelvin_Karari_CV.pdf"   // Optional: rename the file when downloaded
-                className="btn btn-primary mx-[0.5rem] flex font-general"
-              >
-                <img 
-                  className="my-[5px]" 
-                  src={DownloadIcon} 
-                  width="30px" 
-                  height="30px" 
-                  alt="Download" 
-                />
-                <p>Download Resume</p>
-              </a>
-
+              href="/CV - KARARI - 2025_APRIL.pdf"
+              download="Kelvin_Karari_CV.pdf"
+              className="btn btn-primary flex items-center gap-2 px-4 py-2 text-sm sm:text-base w-[80%] sm:w-auto font-general justify-center"
+            >
+              <img src={DownloadIcon} width="24" height="24" alt="Download" />
+              <p>Download Resume</p>
+            </a>
 
             <a 
               href="https://github.com/p-karari" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn btn-primary mx-[0.5rem] flex font-general"
+              className="btn btn-primary flex items-center gap-2 px-4 py-2 text-sm sm:text-base w-[80%] sm:w-auto font-general justify-center"
             >
-              <img className="my-[5px]" src={Github} width="30px" height="30px" alt="GitHub" />
-              <p>Github</p>
+              <img src={Github} width="24" height="24" alt="GitHub" />
+              <p>GitHub</p>
             </a>
 
             <a 
               href="https://www.linkedin.com/in/kelvin-karari-120867245" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn btn-primary mx-[0.5rem] flex font-general"
+              className="btn btn-primary flex items-center gap-2 px-4 py-2 text-sm sm:text-base w-[80%] sm:w-auto font-general justify-center"
             >
-              <img className="my-[5px]" src={LinkedInIcon} width="30px" height="30px" alt="LinkedIn" />
+              <img src={LinkedInIcon} width="24" height="24" alt="LinkedIn" />
               <p>LinkedIn</p>
             </a>
-
           </div>
         </div>
       </div>
