@@ -1,4 +1,3 @@
-import React from 'react';
 import critical from "../images/critical thinking icon.jpg";
 import DownloadIcon from '../assets/down-arrow-circle-svgrepo-com.svg';
 import Github from '../assets/github-142-svgrepo-com.svg';
@@ -9,7 +8,6 @@ function Hero() {
   return (
     <div className="px-4 py-10 w-full max-w-screen overflow-hidden">
       <div className="hero-content flex flex-col lg:flex-row-reverse items-center justify-between gap-4 w-full">
-        {/* Image (only visible on large screens) */}
         <Tilt 
           className="rounded-lg shadow-2xl w-[80%] sm:w-[60%] lg:w-[40%] hidden lg:block" 
           options={{ max: 25, scale: 1.05 }}
@@ -21,7 +19,6 @@ function Hero() {
           />
         </Tilt>
 
-        {/* Text Section */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-[60%]">
           <h1 className="text-[7vw] sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white font-general leading-tight">
             🚀 Turning Coffee into Code, One Bug at a Time<br />
@@ -31,7 +28,6 @@ function Hero() {
             I'm Kelvin Karari, a passionate software engineer who loves solving real-world problems through code.
           </p>
 
-          {/* Buttons */}
           <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center lg:justify-start items-center gap-3 mt-6 w-full">
             <a 
               href="/CV - KARARI - 2025_APRIL.pdf"
